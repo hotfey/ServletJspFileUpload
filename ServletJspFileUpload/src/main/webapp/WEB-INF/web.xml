@@ -1,0 +1,28 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+	<!-- Resource cleanup -->
+	<listener>
+		<listener-class>
+			org.apache.commons.fileupload.servlet.FileCleanerCleanup
+		</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>FileUploadSverlet</servlet-name>
+		<display-name>FileUploadSverlet</display-name>
+		<description>FileUploadSverlet</description>
+		<servlet-class>com.hotfey.sjfu.servlet.FileUploadSverlet</servlet-class>
+		<init-param>
+			<description>Define storage path for file uploads</description>
+			<param-name>fileDirectroy</param-name>
+			<param-value>/data/file/upload</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FileUploadSverlet</servlet-name>
+		<url-pattern>/FileUploadSverlet</url-pattern>
+	</servlet-mapping>
+</web-app>
