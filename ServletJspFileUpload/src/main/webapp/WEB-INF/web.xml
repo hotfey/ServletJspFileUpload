@@ -16,9 +16,9 @@
 		<description>FileUploadSverlet</description>
 		<servlet-class>com.hotfey.sjfu.servlet.FileUploadSverlet</servlet-class>
 		<init-param>
-			<description>Define storage path for file uploads</description>
 			<param-name>fileDirectroy</param-name>
 			<param-value>/data/file/upload</param-value>
+			<description>Define storage path for file uploads</description>
 		</init-param>
 	</servlet>
 	<servlet-mapping>
